@@ -3,7 +3,8 @@
 <%= simple_form_for(@restaurant) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
-  <%= f.input :category, as: :check_boxes, collection: Restaurant::CATEGORY %>
+  <%# <%= f.input :category, collection: Restaurant::CATEGORY %>
+  <%= f.input :category, as: :radio_buttons, collection: Restaurant::CATEGORY %>
   <%= f.submit %>
 <% end %>
 
